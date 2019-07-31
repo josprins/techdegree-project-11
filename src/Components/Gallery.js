@@ -1,9 +1,9 @@
-import React from 'react'
+import React  from 'react';
 
 const Gallery = props => (
-    <li>
-      <img src={props.url} alt={props.title} />
-    </li>
-)
+  <li>
+    <img src={props.url} alt="" />
+  </li>
+);
 
-export default Gallery
+export default Gallery;

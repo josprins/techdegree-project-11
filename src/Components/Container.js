@@ -1,22 +1,24 @@
-import React from 'react'
-import Gallery from './Gallery'
+import React  from 'react';
+import Gallery from './Gallery';
 
 const Container = props => {
 
-    const results = props.data
-    let pictures = results.map(pic =>
-        <Gallery 
-                title={pic.title}
-                key={pic.id} 
-                url={`https://farm${pic.farm}.staticflickr.com/${pic.server}/${pic.id}_${pic.secret}_m.jpg`}
-            />
-    )
+  //Using map() to loop through list of images 
+  const results = props.data;
+  let pictures = results.map(picture =>
+    <Gallery key={picture.id} url={`https://farm${picture.farm}.staticflickr.com/${picture.server}/${picture.id}_${picture.secret}.jpg`}/>
+  );
 
-    return(
-        <ul className="Container">
-            {pictures}
+  return (
+    <div>
+      <h2>Results</h2>
+      <div className="photo-container">
+        <ul>
+          {pictures}
         </ul>
-    )
+      </div>
+    </div>
+  );
 }
 
-export default Container
+export default Container;

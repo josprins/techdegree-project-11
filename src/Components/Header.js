@@ -1,12 +1,13 @@
-import React from 'react'
-import Nav from './Nav'
-import SearchForm from './SearchForm'
+import React  from 'react';
+import Search from './Search';
+import Nav from './Nav';
 
-const Header = ({ onSearch }) => (
-    <div>
-        <SearchForm onSearch={onSearch}/>
-        <Nav />
-    </div>
-)
+const Header = ({onSearch}) => (
+  <div>
+    <h1>Flickr Gallery</h1>
+    <Search onSearch={onSearch}/>
+    <Nav />
+  </div>
+);
 
-export default Header
+export default Header;
